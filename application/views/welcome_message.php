@@ -6,9 +6,13 @@
 		<link href="css/styles.css" rel="stylesheet">
 		<script type="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 		<script type="js/bootstrap.js"></script>
+		<script type="js/functions.js"></script>
 	</head>
 	<body>
-		<h1>Surprise motherfucker</h1>
+		<h1>Goldmine</h1>
+		<?php
+			echo "hai";
+		?>
 		<div class="main">
 			<div class="panel panel-default">
 				  <div class="panel-body">
@@ -18,13 +22,15 @@
 				  </div>
 				  <div class="panel-footer">Panel footer</div>
 			</div>
-		</div>
-		<ul class="list-group">
-  			<li class="list-group-item">
-			    <span class="badge">14</span>
+			<div class="list-group">
+			  <a href="#" class="list-group-item active">
 			    Cras justo odio
-		  	</li>
-		</ul>
-		
+			  </a>
+			  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+			  <a href="#" class="list-group-item">Morbi leo risus</a>
+			  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+			  <a href="#" class="list-group-item">Vestibulum at eros</a>
+			</div>
+		</div>		
 	</body>
 </html>
