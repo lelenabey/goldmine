@@ -11,7 +11,10 @@
 	<body>
 		<h1>Goldmine</h1>
 		<?php
-			echo "hai";
+			echo form_open();
+			echo form_label("newsong: ");
+			echo form_input("link");
+			echo form_submit("add","Add");
 		?>
 		<div class="main">
 			<div class="panel panel-default">
