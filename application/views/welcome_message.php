@@ -12,8 +12,10 @@
 		<h1>Goldmine</h1>
 		<?php
 			echo form_open();
-			echo form_label("newsong: ");
+			echo form_label("newsong :");
 			echo form_input("link");
+			echo form_label("to :");
+			echo form_input("pl_name");
 			echo form_submit("add","Add");
 		?>
 		<div class="main">
