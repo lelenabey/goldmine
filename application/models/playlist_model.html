@@ -1,0 +1,33 @@
+<?php
+class Playlist_model extends CI_Model {
+
+	function getAll()
+	{  
+		$query = $this->db->get('playlists');
+		return $query->result('playlist');
+	}  
+	
+	function get($id)
+	{
+		$query = $this->db->get_where('playlists',array('id' => $id));
+		
+		return $query->row(0,'playlist');
+	}
+	
+	function delete($id) {
+		return $this->db->delete("playlists",array('id' => $id ));
+	}
+	
+	function insert($playlist) {
+		$this->db->insert("playlists", array('url' => $playlist->name));
+		return $this->db->insert_id();
+	}
+	 
+	function update($playlist) {
+		$this->db->where('id', $playlist->id);
+		return $this->db->update("playlists", array('name' => $playlist->name));
+	}
+	
+	
+}
+?>
