@@ -22,14 +22,18 @@ class Main extends CI_Controller {
 		$this->load->view('main_screen');
 	}
 
-	public function add(){
-		$this->load->view('add_song');
+	public function loadPlay($id){
+		$data =array('id'=> $id);	
+		$this->load->view('main_screen', $data);
+	}
+	public function add($id){
+		$data =array('id'=> $id);
+		$this->load->view('add_song', $data);
 	}
 
 	public function addSong($id){
 		$this->load->library('form_validation');
         $this->form_validation->set_rules('link', 'Link', 'required');
-        $this->form_validation->set_rules('playlist', 'Playlist_id', 'required');
         if ($this->form_validation->run() == TRUE) {
             $this->load->model('song');
             $this->load->model('song_model');
